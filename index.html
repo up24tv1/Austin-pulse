@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Austin Turnover Dispatch matches STR hosts with available local cleaners for same-day turnovers, surge weekends, and cancellation rescues." />
+  <title>Austin Turnover Dispatch | Same-Day STR Cleaning</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">Austin Turnover Dispatch</a>
+    <nav aria-label="Primary">
+      <a href="#marketplace">Live dispatch</a>
+      <a href="#book">Book</a>
+      <a href="#cleaners">Cleaner roster</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Austin · Lake Travis · Hill Country</p>
+        <h1>Your cleaner cancelled. We turn the job into a live dispatch.</h1>
+        <p class="lede">Post one urgent turnover request and we package it for local crews, Taskrabbit, Angi-style pros, Facebook Marketplace cleaners, and direct owner/operator decision makers.</p>
+        <div class="actions">
+          <a class="button primary" href="#book">Start a dispatch</a>
+          <a class="button secondary" href="#marketplace">See the workflow</a>
+        </div>
+        <ul class="trust-list" aria-label="Service guarantees">
+          <li>Cleaner confirmed before balance</li>
+          <li>Photo proof required</li>
+          <li>Host and cleaner text-ready</li>
+        </ul>
+      </div>
+      <aside class="dispatch-card" aria-label="Current dispatch status">
+        <div class="status-dot"></div>
+        <p class="card-kicker">Operator view</p>
+        <h2>Live Austin job board</h2>
+        <dl>
+          <div><dt>Avg. match</dt><dd>15 min</dd></div>
+          <div><dt>Rush fee</dt><dd>+$30</dd></div>
+          <div><dt>Hold</dt><dd>$25</dd></div>
+        </dl>
+        <p>Every request creates a clean job summary your dispatcher can send directly to decision makers.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="marketplace">
+      <p class="eyebrow">Real-world dispatch workflow</p>
+      <h2>One request, four sourcing lanes, direct confirmation.</h2>
+      <div class="lane-grid">
+        <article><span>01</span><h3>Roster text blast</h3><p>Known Austin cleaners get the date, zip, bedroom count, access notes, and payout window first.</p></article>
+        <article><span>02</span><h3>Taskrabbit-ready brief</h3><p>Copy a structured gig description for same-day cleaning Taskers without rewriting the job.</p></article>
+        <article><span>03</span><h3>Angi-style pro outreach</h3><p>Send a concise quote request to cleaning companies and owner/operators who can approve the job.</p></article>
+        <article><span>04</span><h3>Facebook Marketplace post</h3><p>Generate a public-safe cleaner gig post that hides sensitive access details until confirmation.</p></article>
+      </div>
+    </section>
+
+    <section class="split section">
+      <div>
+        <p class="eyebrow">Simple pricing</p>
+        <h2>No surprise line items.</h2>
+        <p>Use this as cancellation rescue, weekend overflow, or World Cup 2026 capacity planning. Larger or messy jobs are quoted from photos before dispatch.</p>
+      </div>
+      <div class="pricing">
+        <div><strong>$140</strong><span>1–2BR standard</span></div>
+        <div><strong>$180</strong><span>3BR full home</span></div>
+        <div><strong>$220+</strong><span>4BR+ heavy reset</span></div>
+      </div>
+    </section>
+
+    <section class="section form-section" id="book">
+      <div>
+        <p class="eyebrow">Book a turnover</p>
+        <h2>Build a dispatch packet in 60 seconds.</h2>
+        <p>The Cloudflare Pages backend validates the request and returns a copy-ready gig packet for your dispatcher.</p>
+      </div>
+      <form id="dispatch-form" class="form">
+        <label>Name<input name="name" autocomplete="name" required /></label>
+        <label>Phone / WhatsApp<input name="phone" autocomplete="tel" required /></label>
+        <label>Email<input name="email" type="email" autocomplete="email" /></label>
+        <label>Property area<input name="area" placeholder="East Austin, Zilker, Lakeway" required /></label>
+        <div class="two-col">
+          <label>Bedrooms<select name="bedrooms"><option>1–2BR</option><option>3BR</option><option>4BR</option><option>5BR+</option></select></label>
+          <label>Cleaning date<input name="date" type="date" required /></label>
+        </div>
+        <div class="two-col">
+          <label>Checkout<input name="checkout" type="time" /></label>
+          <label>Guest-ready by<input name="readyBy" type="time" required /></label>
+        </div>
+        <label>Decision maker<select name="decisionMaker"><option>Host / owner</option><option>Property manager</option><option>Cleaner coordinator</option><option>Assistant booking for owner</option></select></label>
+        <label>Notes<textarea name="notes" rows="4" placeholder="Pets, laundry, parking, supplies, listing link"></textarea></label>
+        <button class="button primary" type="submit">Create dispatch packet →</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section results" id="results" hidden>
+      <p class="eyebrow">Copy-ready output</p>
+      <h2>Dispatch packet</h2>
+      <pre id="packet"></pre>
+      <div class="market-actions" id="market-actions"></div>
+    </section>
+
+    <section class="section cleaner-panel" id="cleaners">
+      <div>
+        <p class="eyebrow">For cleaners</p>
+        <h2>Get Austin turnover gigs without a margin split.</h2>
+        <p>Text-ready jobs, direct confirmation, and clear scopes before you accept.</p>
+      </div>
+      <a class="button secondary" href="mailto:up24tv1@gmail.com?subject=Cleaner%20Roster%20Application">Apply by email</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Austin Turnover Dispatch · No final booking until a cleaner confirms.</footer>
+  <script src="src/app.js" defer></script>
+</body>
+</html>
